@@ -1,6 +1,8 @@
-/* ==========================================================================
-   MOBILE VERSION (Fixed Layout & Navigation)
-   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 @media (max-width: 768px) {
   html,
   body {
