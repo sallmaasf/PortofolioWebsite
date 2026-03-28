@@ -1,0 +1,1005 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTOFOLIO NAYZA SALMA</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
+  </head>
+
+  <body>
+    <canvas id="particles"></canvas>
+<header>
+  <h1>Nayza Salma</h1>
+
+  <!-- HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <nav id="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#portofolio">Portofolio</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+    <!-- OPENING SCREEN -->
+    <div id="opening">
+      <div class="opening-content">
+        <div class="opening-icons">
+          <div class="icon-circle">&lt;/&gt;</div>
+          <div class="icon-circle">👤</div>
+          <div class="icon-circle">⚡</div>
+        </div>
+
+        <h1 class="opening-title">
+          <span class="line line1">Welcome To My</span>
+          <span class="line line2">Portofolio Website</span>
+        </h1>
+
+        <p class="opening-link">
+          <span id="typing"></span><span class="cursor">|</span>
+        </p>
+
+        <div class="loading-wrapper">
+          <div class="progress-bar"><div class="progress"></div></div>
+          <p class="loading-text"><span id="percent">0</span>%</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="hero reveal" id="home">
+      <div class="particles"></div>
+      <div class="hero-container">
+        <div class="hero-left">
+          <p class="tagline">
+            Student • Tech Enthusiast • Web Development Learner
+          </p>
+
+          <h1 class="hero-title">
+            Hi, I am <br />
+            <span>an Aspiring Web Developer</span>
+          </h1>
+
+          <p class="subtitle">
+            <span id="typing-subtitle"></span><span class="cursor">|</span>
+          </p>
+
+          <p class="description">
+            I am currently learning web development and building projects to
+            improve my skills in HTML, CSS, and JavaScript.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#portofolio" class="btn-primary">View My Work</a>
+            <a href="#contact" class="btn-outline">Let's Connect</a>
+          </div>
+
+          <div class="social-icons">
+            <a href="https://github.com/sallmaasf" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/nayza-salma-faatihah-6a965433b"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://www.instagram.com/sallmaasf/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="tech-orbit">
+            <div class="laptop">
+              <div class="screen"></div>
+              <div class="keyboard"></div>
+            </div>
+
+            <div class="orbit html">HTML</div>
+            <div class="orbit css">CSS</div>
+            <div class="orbit js">JS</div>
+            <div class="orbit java">JAVA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section reveal">
+      <h2 class="about-title">About Me</h2>
+
+      <p class="about-subtitle">
+        ✧ Transforming ideas into digital experiences ✧
+      </p>
+
+      <div class="about-container">
+        <!-- LEFT TEXT -->
+        <div class="about-left">
+          <h3 class="about-hello">Hi, I am</h3>
+          <h1>Nayza Salma Faatihah</h1>
+
+          <p>
+            Mahasiswa Pendidikan Teknologi Informasi yang tertarik pada
+            pengembangan Front-End dan desain pengalaman digital. Saya berfokus
+            pada menciptakan tampilan web yang modern, interaktif, dan nyaman
+            digunakan oleh pengguna.
+          </p>
+
+          <div class="about-buttons">
+            <a
+              href="asset/cv ats_nayza salma.pdf"
+              target="_blank"
+              class="btn-primary"
+            >
+              Download CV
+            </a>
+
+            <!-- MUSIC WIDGET -->
+            <div class="music-widget">
+              <div class="music-icon" id="musicBtn">▶</div>
+
+              <div class="music-content">
+                <div class="music-title">So High School - Taylor Swift</div>
+
+                <div class="music-progress">
+                  <div class="music-progress-bar"></div>
+                </div>
+
+                <div class="music-time">
+                  <span id="current">0:00</span>
+                  <span id="duration">0:00</span>
+                </div>
+              </div>
+
+              <audio id="music" loop>
+                <source src="asset/So High School.mp3" type="audio/mpeg" />
+              </audio>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOTO -->
+        <div class="about-right">
+          <div class="profile-circle">
+            <img src="asset/pfp.jpeg" alt="profile" class="lightbox-trigger" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+      <img id="lightbox-img" />
+    </div>
+
+    <!-- EDUCATION -->
+    <section id="education" class="education reveal">
+      <h2 class="education-title">Education Journey</h2>
+      <p class="education-subtitle">My academic path and learning experience</p>
+
+      <!-- UNIV -->
+      <div class="education-row">
+        <div class="education-image">
+          <img src="asset/pti.jpeg" class="edu-glow lightbox-trigger" />
+        </div>
+
+        <div class="education-text">
+          <h3>Universitas Negeri Surabaya</h3>
+          <h3>S1 Pendidikan Teknologi Informasi</h3>
+          <span class="edu-year">2024 - Present</span>
+          <p>
+            Saat ini saya sedang menempuh pendidikan di Program Studi Pendidikan
+            Teknologi Informasi Universitas Negeri Surabaya. Selama masa
+            perkuliahan, saya mempelajari berbagai bidang seperti teknologi
+            digital dan desain pengalaman pengguna. Melalui proses belajar ini,
+            saya terus mengembangkan kemampuan dalam pemrograman, pembuatan
+            website/aplikasi, serta pemanfaatan teknologi dalam dunia
+            pendidikan.
+          </p>
+        </div>
+      </div>
+
+      <!-- SMK -->
+      <div class="education-row reverse">
+        <div class="education-image">
+          <img src="asset/smk.jpeg" class="edu-glow lightbox-trigger" />
+        </div>
+
+        <div class="education-text">
+          <h3>SMKN 4 Surabaya - Multimedia</h3>
+          <span class="edu-year">2021 - 2024</span>
+          <p>
+            Saya telah menempuh pendidikan di SMKN 4 Surabaya dengan jurusan
+            Multimedia, di mana saya mulai mengenal dunia teknologi dan media
+            digital. Di sini saya mempelajari desain grafis, pengolahan media
+            digital, serta dasar-dasar pemrograman, yang kemudian menjadi awal
+            ketertarikan saya untuk mendalami bidang web development dan
+            teknologi informasi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTOFOLIO -->
+    <section id="portofolio" class="portofolio reveal">
+      <h2 class="portfolio-title">Portofolio Showcase</h2>
+      <p class="portfolio-subtitle">
+        Explore my journey through projects, certification, and technical
+        expertise.
+      </p>
+
+      <!-- TAB MENU -->
+      <div class="portfolio-tabs">
+        <button class="tab-btn active" data-tab="projects">
+          <i class="fa-solid fa-code"></i>
+          <span>Projects</span>
+        </button>
+
+        <button class="tab-btn" data-tab="certificates">
+          <i class="fa-solid fa-award"></i>
+          <span>Certificates</span>
+        </button>
+
+        <button class="tab-btn" data-tab="tech">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Tech Stack</span>
+        </button>
+      </div>
+
+<div class="tab-content active" id="projects">
+  <div class="portfolio-grid">
+    
+    <div class="portfolio-card"
+         data-title="Flutter Ebook Mobile Apps"
+         data-desc="Project ini mendemonstrasikan kemampuan dalam membangun aplikasi mobile yang fungsional dengan memperhatikan aspek keamanan data (melalui Firebase Rules) dan estetika visual."
+         data-link="https://github.com/claraurelia/flutter_e-book_remake.git"
+     data-img="asset/Screenshot 2026-03-19 010700.png"
+     data-img-v="asset/flutter vert.png"
+         data-year="2025"
+         data-tools="devicon-androidstudio-plain, devicon-vscode-plain, devicon-flutter-plain, devicon-dart-plain, devicon-firebase-plain"> <div class="img-wrapper">
+        <img src="asset/Screenshot 2026-03-19 010700.png" alt="Project 1" />
+        <div class="overlay">
+          <span>View Detail</span>
+        </div>
+      </div>
+
+      <h4>Flutter E-book Mobile Apps</h4>
+      </div>
+
+    <div class="portfolio-card"
+         data-title="E-Library Desktop App"
+         data-desc="Project ini adalah aplikasi manajemen perpustakaan digital berbasis desktop yang dirancang untuk mendigitalisasi proses peminjaman, pengembalian, dan pendataan buku. Fokus utama project ini adalah efisiensi operasional dan akurasi data inventaris dalam skala menengah."
+         data-link="https://github.com/claraurelia/project_perpustakaan.git"
+     data-img="asset/perpus.jpg"
+     data-img-v="asset/perpus vert.png"
+         data-year="2025"
+         data-tools="devicon-java-plain-wordmark, devicon-netbeans-plain, devicon-mysql-plain-wordmark"> <div class="img-wrapper">
+        <img src="asset/perpus.jpg" alt="Project 2" />
+        <div class="overlay">
+          <span>View Detail</span>
+        </div>
+      </div>
+
+      <h4>E-Library Desktop App</h4>
+    </div>
+
+<div class="portfolio-card"
+     data-title="UI / UX Ebook Mobile Apps"
+     data-desc="Project ini adalah perancangan antarmuka (UI) dan pengalaman pengguna (UX) untuk aplikasi pembaca buku digital. Fokus utamanya adalah menciptakan lingkungan baca yang bebas distraksi (Distraction-Free Reading) dengan navigasi yang intuitif, serta memastikan visual tetap modern melalui pendekatan Flat Design."
+     data-link="https://www.figma.com/proto/oy6FOj2FutJpKsqTfAawJ4/MOBILE-UI?node-id=2-6&starting-point-node-id=2%3A6&t=LgSNXOXMUqxDg5JH-1"
+     data-img="asset/Screenshot 2026-03-19 010700.png" 
+     data-img-v="asset/figma.png"
+     data-year="2025"
+     data-tools="https://cdn.simpleicons.org/figma/F24E1E" > 
+    
+    <div class="img-wrapper">
+        <img src="asset/Screenshot 2026-03-19 010700.png" alt="Project UI/UX" />
+        <div class="overlay">
+            <span>View Detail</span>
+        </div>
+    </div>
+
+    <h4>UI / UX Ebook Mobile Apps</h4>
+</div>
+
+    <div class="portfolio-card"
+         data-title="Edustock Inventory System"
+         data-desc="Project ini adalah solusi sistem informasi manajemen stok (inventory) berbasis desktop yang dirancang menggunakan framework .NET."
+         data-link="https://github.com/meyylodon/Edustock-Inventory-System/tree/master"
+         data-img="asset/pemvis.png" data-img-v="asset/pemvis v.png"
+         data-year="2025"
+         data-tools="devicon-visualstudio-plain, devicon-dot-net-plain-wordmark" > <div class="img-wrapper">
+        <img src="asset/pemvis.png" alt="Project 4" />
+        <div class="overlay">
+          <span>View Detail</span>
+        </div>
+      </div>
+
+      <h4>Edustock Inventory System</h4>
+    </div>
+
+</div>
+
+
+</div>
+
+
+
+      <!-- CERTIFICATES -->
+      <div class="tab-content" id="certificates">
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img src="asset/sertif/BNSP.png" alt="BNSP JGD Certificate" />
+              <a
+                href="asset/sertif/BNSP.pdf"
+                target="_blank"
+                class="view-overlay"
+              >
+                View PDF
+              </a>
+            </div>
+            <h4>Sertifikasi BNSP Junior Graphic Designer</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/BNSP.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/BNSP content creator.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Sertifikasi BNSP Content Creator</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/BNSP.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/BNSP audio video.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Sertifikasi BNSP Audio Video</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/BNSP.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/BNSP operator desain.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Sertifikasi BNSP Operator Desain Grafis</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/magang.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/sertifikat magang gracio.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Praktik Kerja Industri Multimedia</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/MM.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/sertifikat MM.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Penghargaan Kejuruan Multimedia</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/TELKOM (1).png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/SERTIFIKAT TELKOM.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Pelatihan dan Sertifikasi Graphic Designer</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/PKBPI.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/SERTIF PKBPI.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Webinar IT</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/Future Entrepreneur.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/Future Entreprenerur Summit NAYZA SALMA FAATIHAH.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Seminar Future Entrepreneur</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/Pelatihan Entrepreneurship.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/Pelatihan Entrepreneurship NAYZA SALMA FAATIHAH.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Pelatihan Entrepreneurship</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/Kompetisi Ide Bisnis.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/Kompetisi Ide Bisnis NAYZA SALMA FAATIHAH.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Kompetisi Ide Bisnis</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/Self-Development.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/Self Development NAYZA SALMA FAATIHAH.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Webinar Self-Development</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/Training Public Speaking.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/Traning Public Speaking NAYZA SALMA FAATIHAH.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Training Public Speaking</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/Asia Futurepreneur Selection.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/Asia Futurepreneur Selection Program 2025 NAYZA SALMA FAATIHAH.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Asia Futurepreneur Selection</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/PKKMB.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/SERRTIFIKAT PKKMB 2024 NAYZA SALMA FAATIHAH.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>PKKMB 2024 UNESA</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/LKMM Pra TD (1).png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/LKMM Pra TD_Nayza Salma.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>
+              Latihan Keterampilan Manajemen Mahasiswa Pra-Tingkat Dasar 2024
+            </h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/Nayza Salma Faatihah LKMM TD.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/Nayza Salma Faatihah LKMM TD.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Latihan Keterampilan Manajemen Mahasiswa Tingkat Dasar 2025</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/TQQ.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/Nayza Salma Faatihah TQQ.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Ta'limul Qiroatil Qur'an (TQQ) Akbar 2025</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/Panitia Kaderisasi.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/Nayza Salma Faatihah AMELIO.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Bendahara Kaderisasi Himpunan Mahasiswa Informatika 2025</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/Panitia Pra TD.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/PANITIA PRA TD Nayza Salma Faatihah-.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Bendahara LKMM Pra-TD Himpunan Mahasiswa Informatika 2025</h4>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="certificate-img">
+              <img
+                src="asset/sertif/Panitia TD.png"
+                alt="Content Creator Certificate"
+              />
+              <a
+                href="asset/sertif/Sertif TD_Nayza Salma Faatihah.pdf"
+                target="_blank"
+                class="view-overlay"
+                >View PDF</a
+              >
+            </div>
+            <h4>Sekretaris LKMM-TD Himpunan Mahasiswa Informatika 2025</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- TECH STACK -->
+      <div class="tab-content reveal" id="tech">
+        <!-- PROGRAMMING LANGUAGES -->
+        <h3 class="tech-category">Programming Languages</h3>
+
+        <div class="tech-skill">
+          <div class="skill-info">
+            <div class="skill-name">
+              <i class="fa-brands fa-html5"></i> HTML
+            </div>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 85%"></div>
+          </div>
+        </div>
+
+        <div class="tech-skill">
+          <div class="skill-info">
+            <div class="skill-name">
+              <i class="fa-brands fa-css3-alt"></i> CSS
+            </div>
+            <span>60%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 60%"></div>
+          </div>
+        </div>
+
+        <div class="tech-skill">
+          <div class="skill-info">
+            <div class="skill-name">
+              <i class="fa-brands fa-js"></i> JavaScript
+            </div>
+            <span>50%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 50%"></div>
+          </div>
+        </div>
+
+        <div class="tech-skill">
+          <div class="skill-info">
+            <div class="skill-name"><i class="fa-brands fa-java"></i> Java</div>
+            <span>60%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 60%"></div>
+          </div>
+        </div>
+
+        <div class="tech-skill">
+          <div class="skill-info">
+            <div class="skill-name">
+              <i class="fa-brands fa-python"></i> Phyton
+            </div>
+            <span>75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 75%"></div>
+          </div>
+        </div>
+
+        <!-- DATABASE -->
+        <h3 class="tech-category">Database</h3>
+
+        <div class="tech-skill">
+          <div class="skill-info">
+            <div class="skill-name">
+              <i class="fa-solid fa-database"></i> MySQL
+            </div>
+            <span>70%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 70%"></div>
+          </div>
+        </div>
+
+        <!-- TOOLS / APPLICATIONS -->
+        <h3 class="tech-category">Tools & Applications</h3>
+
+        <div class="tech-skill">
+          <div class="skill-info">
+            <div class="skill-name">
+              <i class="fa-brands fa-figma"></i> Figma
+            </div>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 85%"></div>
+          </div>
+        </div>
+
+        <div class="tech-skill">
+          <div class="skill-info">
+            <div class="skill-name">
+              <i class="fa-solid fa-pen-nib"></i> Adobe Photoshop
+            </div>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 85%"></div>
+          </div>
+        </div>
+
+        <div class="tech-skill">
+          <div class="skill-info">
+            <div class="skill-name">
+              <i class="fa-solid fa-video"></i> Adobe Premiere
+            </div>
+            <span>77%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 77%"></div>
+          </div>
+        </div>
+
+        <div class="tech-skill">
+          <div class="skill-info">
+            <div class="skill-name">
+              <i class="fa-solid fa-bezier-curve"></i> Corel Draw
+            </div>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 85%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<div class="stats-container reveal">
+  <div class="stat-card">
+    <i class="fa-solid fa-code"></i>
+    <h2 class="stat-number" data-target="2">0</h2>
+    <p>Projects</p>
+  </div>
+
+  <div class="stat-card">
+    <i class="fa-solid fa-award"></i>
+    <h2 class="stat-number" data-target="15">0</h2>
+    <p>Certificates</p>
+  </div>
+
+  <div class="stat-card">
+    <i class="fa-solid fa-layer-group"></i>
+    <h2 class="stat-number" data-target="8">0</h2>
+    <p>Tech Stack</p>
+  </div>
+</div>
+
+    <!-- ORGANIZATION ACTIVITIES -->
+    <section class="activities reveal" id="activities">
+      <h2 class="activities-title">Organization Activities</h2>
+      <p class="activities-subtitle">
+        My involvement in student organizations and leadership activities.
+      </p>
+
+      <!-- HIMA -->
+      <div class="org-highlight">
+        <div class="org-image">
+          <img
+            src="asset/dokum/HMPPTI.jpg"
+            alt="HIMA Informatika"
+            class="lightbox-trigger"
+          />
+        </div>
+
+        <div class="org-info">
+          <h3>Himpunan Mahasiswa Prodi</h3>
+          <h3>Pendidikan Teknologi Informasi</h3>
+
+          <p>
+            Saya aktif berpartisipasi dalam Himpunan Mahasiswa Prodi Pendidikan
+            Teknologi Informasi, berkontribusi pada program kepemimpinan,
+            pengembangan organisasi, dan kegiatan mahasiswa. Melalui organisasi
+            ini saya memperoleh pengalaman dalam kerja tim, komunikasi,
+            manajemen acara, dan kepemimpinan.
+          </p>
+        </div>
+      </div>
+
+      <!-- PSDM (REVERSE) -->
+      <div class="org-highlight reverse">
+        <div class="org-image">
+          <img
+            src="asset/dokum/PSDM.jpg"
+            alt="PSDM Division"
+            class="lightbox-trigger"
+          />
+        </div>
+
+        <div class="org-info">
+          <h3>Departemen Pengembangan</h3>
+          <h3>Sumber Daya Mahasiswa</h3>
+
+          <p>
+            Di Departemen PSDM, saya berkontribusi pada program pengembangan
+            internal, keterampilan, dan karakter anggota. Fokusnya mencakup
+            pelatihan kepemimpinan, kegiatan kaderisasi, mentoring. Peran ini
+            membantu meningkatkan kemampuan kepemimpinan, komunikasi, dan kerja
+            tim saya dalam mengelola kegiatan organisasi serta membangun budaya
+            organisasi yang solid dan berdaya saing tinggi.
+          </p>
+        </div>
+      </div>
+
+      <!-- ACTIVITY GALLERY -->
+      <div class="activity-gallery reveal">
+        <img src="asset/dokum/IMG_1283.JPG" class="gallery-img" />
+        <img src="asset/dokum/IMG_2165.png" class="gallery-img" />
+        <img src="asset/dokum/IMG_2311.JPG" class="gallery-img" />
+        <img src="asset/dokum/IMG_2555.jpg" class="gallery-img" />
+        <img src="asset/dokum/IMG_2772.jpg" class="gallery-img" />
+        <img src="asset/dokum/DSC09243.JPG" class="gallery-img" />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.46.52 PM.jpeg"
+          class="gallery-img"
+        />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.47.00 PM.jpeg"
+          class="gallery-img"
+        />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.47.03 PM.jpeg"
+          class="gallery-img"
+        />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.47.10 PM.jpeg"
+          class="gallery-img"
+        />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.47.39 PM.jpeg"
+          class="gallery-img"
+        />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.47.40 PM.jpeg"
+          class="gallery-img"
+        />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.47.41 PM.jpeg"
+          class="gallery-img"
+        />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.47.44 PM.jpeg"
+          class="gallery-img"
+        />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.47.45 PM.jpeg"
+          class="gallery-img"
+        />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.47.46 PM.jpeg"
+          class="gallery-img"
+        />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.47.48 PM.jpeg"
+          class="gallery-img"
+        />
+        <img
+          src="asset/dokum/WhatsApp Image 2026-03-13 at 10.47.50 PM.jpeg"
+          class="gallery-img"
+        />
+      </div>
+      <p class="scroll-hint">Swipe →</p>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+      <img id="lightbox-img" />
+    </div>
+
+<section id="contact" class="contact reveal">
+  <div class="contact-container">
+    <h3>Let's Connect</h3>
+    
+    <div class="social-wrapper">
+      <a href="https://www.linkedin.com/in/nayza-salma-faatihah-6a965433b" target="_blank" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/sallmaasf" target="_blank" class="social-link"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.instagram.com/sallmaasf/" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+
+    <div class="email-wrapper">
+      <a href="mailto:naysalma64@gmail.com" class="email-btn">
+        <i class="fa-solid fa-envelope"></i> Hubungi via Email
+      </a>
+    </div>
+  </div>
+</section>
+
+    <footer>© 2026 Nayza Salma Faatihah. All Rights Reserved.</footer>
+
+    <div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <div class="modal-left">
+      <img id="modalImg" src="" alt="Project Image" />
+    </div>
+
+    <div class="modal-right">
+      <h2 id="modalTitle"></h2>
+      
+      <div class="modal-info-small">
+        <span id="modalYear"></span> </div>
+
+      <p id="modalDesc"></p>
+
+      <div class="tools-section">
+        <h5>Language & Tools</h5>
+        <div id="modalTools" class="modal-tools">
+          </div>
+      </div>
+
+      <a id="modalLink" href="#" target="_blank">Lihat Project</a>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+
+
+  </body>
+</html>

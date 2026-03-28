@@ -1,0 +1,281 @@
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Opening</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        background: #0f172a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        color: white;
+      }
+
+      /* TITLE */
+
+      .title {
+        position: absolute;
+        font-size: 120px;
+        letter-spacing: 10px;
+        opacity: 0.9;
+      }
+
+      /* INTRO */
+
+      #intro {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* LANYARD */
+
+      .lanyard {
+        position: absolute;
+        top: 0;
+        right: 18%;
+
+        width: 4px;
+        height: 190px;
+
+        background: #d1d5db;
+
+        transform-origin: top;
+
+        animation: lanyardSwing 4s ease-in-out infinite;
+      }
+
+      /* CLIP */
+
+      .clip {
+        position: absolute;
+        top: 185px;
+        right: calc(18% - 8px);
+
+        width: 16px;
+        height: 16px;
+
+        background: #d1d5db;
+        border-radius: 50%;
+      }
+
+      /* SHADOW */
+
+      .shadow {
+        position: absolute;
+
+        top: 260px;
+        right: 16%;
+
+        width: 180px;
+        height: 40px;
+
+        background: rgba(0, 0, 0, 0.4);
+
+        filter: blur(20px);
+        border-radius: 50%;
+      }
+
+      /* CARD */
+
+      .card {
+        position: absolute;
+
+        top: -300px;
+        right: 17%;
+
+        width: 200px;
+
+        background: #e7c8a0;
+
+        border-radius: 12px;
+
+        padding: 12px;
+
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+
+        cursor: grab;
+
+        transform-origin: top center;
+
+        animation:
+          drop 1.8s cubic-bezier(0.25, 1.5, 0.5, 1) forwards,
+          swing 4s ease-in-out infinite;
+
+        animation-delay: 0.6s, 2.5s;
+      }
+
+      /* HEADER */
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+        margin-bottom: 8px;
+      }
+
+      /* PHOTO */
+
+      .photo {
+        width: 100%;
+        height: 120px;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-bottom: 8px;
+      }
+
+      .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* NAME VERTICAL */
+
+      .vertical-name {
+        position: absolute;
+
+        right: -40px;
+        top: 70px;
+
+        transform: rotate(90deg);
+
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      /* TEXT */
+
+      .card-text {
+        font-size: 10px;
+        line-height: 1.4;
+      }
+
+      /* DROP */
+
+      @keyframes drop {
+        0% {
+          top: -300px;
+          transform: rotate(-12deg);
+        }
+
+        70% {
+          top: 140px;
+          transform: rotate(10deg);
+        }
+
+        85% {
+          top: 100px;
+        }
+
+        100% {
+          top: 120px;
+          transform: rotate(0deg);
+        }
+      }
+
+      /* CARD SWING */
+
+      @keyframes swing {
+        0% {
+          transform: rotate(-5deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: rotate(-5deg);
+        }
+      }
+
+      /* LANYARD SWING */
+
+      @keyframes lanyardSwing {
+        0% {
+          transform: rotate(-3deg);
+        }
+        50% {
+          transform: rotate(3deg);
+        }
+        100% {
+          transform: rotate(-3deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="title">PORTFOLIO</h1>
+
+    <div id="intro">
+      <div class="lanyard"></div>
+      <div class="clip"></div>
+
+      <div class="shadow"></div>
+
+      <div class="card" id="card">
+        <div class="card-header">
+          <span>IDENTITY CARD</span>
+          <span>★ ★ ★</span>
+        </div>
+
+        <div class="photo">
+          <img src="https://i.pravatar.cc/200" />
+        </div>
+
+        <div class="vertical-name">NAYZA SALMA</div>
+
+        <div class="card-text">
+          Front-End Learner and Web Development enthusiast. Interested in UI
+          design, interactive websites, and creative coding.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* DRAG CARD */
+
+      const card = document.getElementById("card");
+
+      let isDragging = false;
+      let offsetX, offsetY;
+
+      card.addEventListener("mousedown", (e) => {
+        isDragging = true;
+
+        offsetX = e.clientX - card.offsetLeft;
+        offsetY = e.clientY - card.offsetTop;
+
+        card.style.cursor = "grabbing";
+      });
+
+      document.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+
+        card.style.left = e.clientX - offsetX + "px";
+        card.style.top = e.clientY - offsetY + "px";
+      });
+
+      document.addEventListener("mouseup", () => {
+        isDragging = false;
+        card.style.cursor = "grab";
+      });
+    </script>
+  </body>
+</html>
+```
