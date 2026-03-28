@@ -2,7 +2,13 @@
    MOBILE VERSION (Fixed Layout & Navigation)
    ========================================================================== */
 @media (max-width: 768px) {
-  
+  html,
+  body {
+    overflow-x: hidden; /* Kunci biar gak bisa geser kanan kiri */
+    width: 100%;
+    position: relative;
+  }
+
   /* --- NAVIGATION (Hamburger Icons) --- */
   .menu-toggle {
     display: block; /* Munculkan icon hamburger */
@@ -12,14 +18,14 @@
     z-index: 1001;
   }
 
-/* --- HEADER (Base) --- */
+  /* --- HEADER (Base) --- */
   header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 70px;
-      background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,21 +33,21 @@
     z-index: 1000;
   }
 
-/* --- NAVBAR DROPDOWN (Dark Floating Glass) --- */
+  /* --- NAVBAR DROPDOWN (Dark Floating Glass) --- */
   nav {
     position: absolute;
-    top: 80px; 
+    top: 80px;
     left: 5%;
     right: 5%;
     width: 90%;
     /* Background gelap transparan (Glassmorphism) */
-    background: rgba(21, 0, 43, 0.9); 
+    background: rgba(21, 0, 43, 0.9);
     backdrop-filter: blur(50px) !important;
     -webkit-backdrop-filter: blur(50px) !important;
-    
+
     border-radius: 15px; /* Tikungan pas, tidak terlalu bulat */
     border: 1px solid rgba(127, 90, 240, 0.3); /* Border ungu tipis */
-    display: none; 
+    display: none;
     flex-direction: column !important;
     padding: 10px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
@@ -53,7 +59,7 @@
     animation: slideDownFade 0.3s ease-out forwards;
   }
 
-/* Link di dalam menu (Pastikan Teks di Tengah) */
+  /* Link di dalam menu (Pastikan Teks di Tengah) */
   nav a {
     display: block; /* Mengubah jadi block agar text-align berfungsi */
     width: 100%;
@@ -66,7 +72,7 @@
     transition: 0.3s;
     border-radius: 10px;
     margin: 5px 0; /* Jarak antar menu */
-    
+
     /* Reset properti flex jika ada dari desktop */
     flex: none !important;
     justify-content: center !important;
@@ -74,14 +80,14 @@
   }
 
   /* Efek Hover & Active */
-  nav a:hover, nav a.active {
+  nav a:hover,
+  nav a.active {
     background: rgba(98, 98, 98, 0.2);
     color: #f472b6 !important;
   }
-  
 
   /* --- HERO SECTION --- */
-/* --- HERO SECTION (Fixed & Bigger) --- */
+  /* --- HERO SECTION (Fixed & Bigger) --- */
   .hero-container {
     display: flex;
     flex-direction: column-reverse; /* Animasi Laptop Tetap di ATAS */
@@ -92,16 +98,16 @@
 
   .tech-orbit {
     /* Perbesar ukuran dasar kontainer */
-    width: 280px; 
+    width: 280px;
     height: 280px;
-    
+
     /* Margin top dikasih 0 karena sudah ada padding-top di container */
     /* Margin bottom ditambah biar nggak mepet teks "Hi, I am..." */
-    margin: 0 auto 30px auto; 
-    
+    margin: 0 auto 30px auto;
+
     /* Scale dinaikkan dari 0.85 ke 1.1 agar terlihat lebih besar */
-    transform: scale(1.1); 
-    
+    transform: scale(1.1);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,7 +168,7 @@
 
   /* Tombol Download CV dipendekin */
   .about-buttons .btn-primary {
-    order: 1; 
+    order: 1;
     width: auto; /* Biar gak full width */
     min-width: 180px; /* Ukuran pas untuk jari tapi gak kepanjangan */
     padding: 12px 25px;
@@ -175,7 +181,7 @@
   }
 
   /* --- EDUCATION & ACTIVITIES (Foto di Atas & Tengah) --- */
-  .education-row, 
+  .education-row,
   .education-row.reverse,
   .org-highlight,
   .org-highlight.reverse {
@@ -186,13 +192,15 @@
     gap: 20px;
   }
 
-  .education-image, .org-image {
+  .education-image,
+  .org-image {
     width: 100%;
     display: flex;
     justify-content: center; /* Foto di tengah */
   }
 
-  .education-image img, .org-image img {
+  .education-image img,
+  .org-image img {
     max-width: 280px;
     width: 100%;
     border-radius: 15px;
@@ -210,7 +218,7 @@
     background: #6f4296;
     border-radius: 15px;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .portfolio-card img {
@@ -222,27 +230,27 @@
     padding: 15px;
     text-align: left; /* Teks di dalam card rata kiri agar rapi */
   }
-  
-/* --- STATS SECTION (Bigger & Balanced) --- */
+
+  /* --- STATS SECTION (Bigger & Balanced) --- */
   .stats-container {
     display: flex;
-    flex-direction: column; 
-    align-items: center;    /* Pastikan tumpukan di tengah presisi */
-    gap: 18px;              /* Jarak antar kartu sedikit lebih lega */
+    flex-direction: column;
+    align-items: center; /* Pastikan tumpukan di tengah presisi */
+    gap: 18px; /* Jarak antar kartu sedikit lebih lega */
     width: 100%;
     margin: 40px 0;
   }
 
   .stat-card {
-    background: rgba(255, 255, 255, 0.04); 
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(127, 90, 240, 0.25);
-    border-radius: 16px;    /* Tikungan sudut lebih halus */
-    
+    border-radius: 16px; /* Tikungan sudut lebih halus */
+
     /* Ukuran kartu: Dibuat lebih lebar dari sebelumnya */
     width: 300px;
-    height: 200px;           /* Naik dari 140px agar teks tidak sesak */
-    padding: 20px 15px;     /* Padding lebih lega */
-    
+    height: 200px; /* Naik dari 140px agar teks tidak sesak */
+    padding: 20px 15px; /* Padding lebih lega */
+
     display: flex;
     flex-direction: column; /* Angka tetap di ATAS teks */
     justify-content: center;
@@ -252,16 +260,16 @@
   }
 
   .stat-card h2 {
-    font-size: 32px;        /* Angka diperbesar agar lebih 'bold' */
-    color: #a78bfa; 
-    margin: 0 0 8px 0;      /* Jarak ke teks di bawahnya */
+    font-size: 32px; /* Angka diperbesar agar lebih 'bold' */
+    color: #a78bfa;
+    margin: 0 0 8px 0; /* Jarak ke teks di bawahnya */
     font-weight: 800;
     line-height: 1;
   }
 
   .stat-card p {
-    font-size: 13px;        /* Teks keterangan diperbesar sedikit */
-    color: #cbd5e1;         /* Warna abu-abu yang lebih terang agar jelas */
+    font-size: 13px; /* Teks keterangan diperbesar sedikit */
+    color: #cbd5e1; /* Warna abu-abu yang lebih terang agar jelas */
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -285,7 +293,9 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  .activity-gallery::-webkit-scrollbar { display: none; }
+  .activity-gallery::-webkit-scrollbar {
+    display: none;
+  }
 
   .gallery-img {
     flex: 0 0 70%; /* Sedikit lebih kecil biar kelihatan ada foto selanjutnya */
@@ -294,125 +304,117 @@
   }
 }
 
-  /* 1. Paksa Overlay Center di layar HP */
+/* ==========================================================================
+   CLEAN MOBILE MODAL (NO REDUNDANCY)
+   ========================================================================== */
+@media (max-width: 768px) {
   #projectModal {
-    padding: 10px; /* Biar gak nempel tembok layar */
-    align-items: center; 
+    padding: 10px;
+    display: none; /* Muncul via .active */
+    align-items: center;
     justify-content: center;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
   }
 
-  /* 2. Modal Content: JANGAN dikasih height statis */
+  #projectModal.active {
+    display: flex !important;
+  }
+
   .modal-content {
-    flex-direction: column; /* Tumpuk: Gambar atas, Teks bawah */
-    width: 95%;
-    max-width: 400px;      /* Biar gak terlalu lebar di HP gede */
-    height: auto;           /* Biar melar ngikutin konten */
-    max-height: 90dvh;      /* Biar gak luber keluar layar HP */
     display: flex;
-    overflow: hidden;       /* Kunci biar radiusnya tetep cakep */
+    flex-direction: column;
+    width: 95%;
+    max-width: 400px;
+    height: auto;
+    max-height: 90dvh;
+    background: #533072;
     border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(127, 90, 240, 0.3);
   }
 
-  /* 3. Area Gambar di Atas */
+  /* Area Gambar */
   .modal-left {
+    flex: none;
     width: 100%;
-    height: 180px;         /* Kasih tinggi pas buat thumbnail */
-    flex: none;            /* Biar gak tarik-tarikan sama teks */
+    height: 180px;
   }
-
   .modal-left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  /* 4. Area Teks di Bawah */
+  /* Area Teks */
   .modal-right {
-    width: 100%;
-    padding: 20px;
-    flex: 1;               /* Biar dia ngambil sisa ruang */
-    overflow-y: auto;      /* 🔥 KUNCI: Kalau teks kepanjangan, scroll di dalem sini */
+    flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 20px;
     gap: 12px;
+    overflow-y: auto;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
   }
+  .modal-right::-webkit-scrollbar {
+    display: none;
+  } /* Hide scrollbar Chrome/Safari */
 
-  /* 5. Kecilin Font & Spasi */
+  /* Typography & Elements */
   .modal-right h2 {
     font-size: 20px;
+    color: #fff;
     margin: 0;
   }
+  .modal-right h3 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 15px !important;
+  }
 
-  /* --- 1. Rapiin Jarak Tahun ke Deskripsi --- */
-#modalYear {
-  display: block;      /* Pastikan dia baris sendiri */
-  margin-bottom: 5px;  /* Kecilin jarak bawahnya (tadi mungkin 20px+) */
-  font-size: 14px;
-  color: #ffffff;      /* Warna abu-abu biar gak nabrak judul */
-}
-
-#modalDesc {
-  margin-top: 0;       /* Pastikan gak ada margin atas tambahan */
-  margin-bottom: 20px; /* Jarak ke bagian Language Tools */
-  line-height: 1.6;
-}
-
-/* --- 2. Rapiin Jarak Judul Language ke Icon --- */
-.modal-right h3 {      /* Asumsi lu pake h3 buat tulisan "Language Tools" */
-  margin-bottom: 15px !important; /* Kasih napas biar gak nempel icon */
-  font-size: 16px;
-  color: #ffffff;
-}
-
-.modal-tools {
-  display: flex;
-  gap: 15px;           /* Jarak antar icon */
-  margin-top: 10px;    /* Jaga-jaga biar gak nempel teks atasnya */
-  align-items: center;
-}
-
-.modal-tools i {
-  font-size: 24px;
-  color: #ffffff;      /* Warna ungu icon-nya */
-}
-
+  #modalYear {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 5px;
+  }
   #modalDesc {
     font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
+    line-height: 1.6;
+    color: #eee;
+    margin: 0 0 20px 0;
   }
 
   .tools-section h5 {
     font-size: 12px;
     margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.6);
   }
-
-  /* 6. Tombol Close (X) Biar Gak Ngalingin Teks */
-.close {
-/* 1. MATIKAN POSISI ABSOLUTE & TEMPELANNYA */
-    position: static; 
-    top: auto;
-    right: auto;
-    
-    /* 2. PAKAI FLEXBOX UNTUK POSISI */
+  .modal-tools {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Taruh di paling kanan baris ini */
-    
-    /* 3. ATUR TAMPILAN */
-    width: 100%;        /* Penuhin lebar kolom biar flex-end jalan */
-    padding-right: 10px; /* Jarak dari kanan */
-    padding-top: 10px;   /* Jarak dari atas */
-    margin-bottom: 5px;  /* Jarak ke judul di bawahnya */
-    
+    gap: 15px;
+    margin-top: 10px;
+  }
+  .modal-tools i {
+    font-size: 24px;
+    color: #fff;
+  }
+
+  /* Close Button (X) */
+  .close {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 10px 5px 0;
     color: #fff;
     font-size: 30px;
     line-height: 1;
     cursor: pointer;
-    z-index: 10;
-    
-    /* Matikan background bulet yang tadi */
-    background: none; 
-    border-radius: 0;
+    position: static;
+    background: none;
   }
-
+}
