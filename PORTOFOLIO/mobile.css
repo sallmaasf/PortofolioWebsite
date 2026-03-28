@@ -6,7 +6,7 @@
 @media (max-width: 768px) {
   html,
   body {
-    overflow-x: hidden; /* Kunci biar gak bisa geser kanan kiri */
+    overflow-x: hidden !important; /* Kunci biar gak bisa geser kanan kiri */
     width: 100%;
     position: relative;
   }
@@ -102,13 +102,13 @@
     /* Perbesar ukuran dasar kontainer */
     width: 280px;
     height: 280px;
-
+    max-width: 100%; /* Jangan biarkan dia lebih lebar dari layar HP */
     /* Margin top dikasih 0 karena sudah ada padding-top di container */
     /* Margin bottom ditambah biar nggak mepet teks "Hi, I am..." */
     margin: 0 auto 30px auto;
 
     /* Scale dinaikkan dari 0.85 ke 1.1 agar terlihat lebih besar */
-    transform: scale(1.1);
+    transform: scale(1);
 
     display: flex;
     justify-content: center;
@@ -249,7 +249,8 @@
     border-radius: 16px; /* Tikungan sudut lebih halus */
 
     /* Ukuran kartu: Dibuat lebih lebar dari sebelumnya */
-    width: 300px;
+    width: 90% !important; /* Gunakan persentase biar fleksibel */
+    max-width: 300px;
     height: 200px; /* Naik dari 140px agar teks tidak sesak */
     padding: 20px 15px; /* Padding lebih lega */
 
@@ -329,7 +330,7 @@
   .modal-content {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 90vw !important; /* Gunakan vw biar presisi lebar layar HP */
     max-width: 400px;
     height: auto;
     max-height: 90dvh;
