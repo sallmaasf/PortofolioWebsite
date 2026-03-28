@@ -1932,3 +1932,45 @@ footer {
     transform: translateY(0) scale(1);
   }
 }
+
+.scroll-hint {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ffffffcc;
+  letter-spacing: 1px;
+  animation: fadeMove 1.5s infinite;
+}
+
+@keyframes fadeMove {
+  0% {
+    opacity: 0.3;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(8px);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(0);
+  }
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: 24px;
+
+  /* Pastikan background didefinisikan dulu */
+  background: linear-gradient(90deg, #4facfe, #a855f7, #ff4ecd);
+
+  /* Baru dipotong ke teks */
+  -webkit-background-clip: text; /* Untuk Chrome/Safari/Edge */
+  background-clip: text; /* Standar W3C */
+
+  /* Bikin warna aslinya transparan biar gradasi kelihatan */
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback */
+
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
